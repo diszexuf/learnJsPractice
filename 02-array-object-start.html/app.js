@@ -72,10 +72,38 @@ function getNoteTemplate(note, index) {
   `
 }
 
-const names = ['asd', 'qwe', 'ghj', 'upo']
+const people = [
+	{ name: 'asd', budget: 123 },
+	{ name: 'qwe', budget: 1056 },
+	{ name: 'zxc', budget: 789 },
+	{ name: 'iop', budget: 319 },
+]
 
-const greatWoman = 'qweqwe'
-console.log(names.indexOf(greatWoman))
-const newNames = names.with(0, greatWoman)
-console.log(newNames)
-console.log(names)
+// let sumBudget = 0
+// const filteredPeople = people.filter((p) => p.budget > 500)
+// filteredPeople.forEach((p) => (sumBudget += p.budget))
+
+// console.log(sumBudget)
+
+// const bybudget = p => p.budget > 500
+// const pickBudget = p => p.budget
+
+// const sumBudget = people
+// 	.filter(bybudget)
+// 	.map(pickBudget)
+// 	.reduce((acc, p) => acc + p, 0)
+
+// console.log(sumBudget)
+
+const string = 'Privet, kak dela?'
+// const reversed = string.split('').toReversed().join('')
+
+const reversed = string
+	.split('')
+	.toReversed()
+	.join('!')
+	.split('')
+	.filter((c) => c !== '!')
+	.join('')
+
+console.log(reversed)
